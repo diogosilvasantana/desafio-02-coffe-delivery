@@ -14,15 +14,11 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     background: ${props => props.theme["gray-100"]};
-    color: ${props => props.theme["gray-700"]}
+    color: ${props => props.theme["gray-700"]};
     -webkit-font-smoothing: antialiased;
   }
 
   body, input, select, button {
     font: 400 1rem 'Roboto', sans-serif;
-  }
-
-  h1, h2, h3, h4, h5 {
-    font-family: 'Baloo 2', sans-serif;
   }
 `

@@ -11,14 +11,13 @@ export function Header() {
     <img src={logoImg} alt="" />
 
     <HeaderButtonContainer>
-
-      <HeaderButton>
-        <MapPin size={22}/>
+      <HeaderButton variant="purple">
+        <MapPin weight="fill" size={22}/>
         Porto Alegre, RS
       </HeaderButton>
 
-      <HeaderButton>
-        <ShoppingCart size={22}/>
+      <HeaderButton variant="yellow">
+        <ShoppingCart weight="fill" size={22}/>
       </HeaderButton>
 
     </HeaderButtonContainer>
