@@ -6,7 +6,8 @@ import {
   IntroSection,
 } from "./styles";
 
-import coffeIntroImg from "../../assets/coffe-intro.svg";
+import coffeIntroImg from "../../../../assets/coffe-intro.svg";
+
 import { Coffee, Package, ShoppingCart, Timer } from "phosphor-react";
 
 export function Intro() {

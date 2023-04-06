@@ -1,7 +1,15 @@
 import styled from "styled-components";
 
 export const IntroSection = styled.section`
-    padding: 5.75rem 10rem;
+  padding: 5.75rem 10rem;
+  background: url('src/assets/bg-intro.svg');
+  background-size: cover;
+  mask-image: linear-gradient(
+            to top,
+            transparent 1%,
+            black 20%,
+            black 100%
+          );  
 `
 
 export const IntroContainer = styled.div`
@@ -61,10 +69,10 @@ export const IntroDetailsIcon = styled.div<IntroDetailsIconsProps>`
 
   color: ${props => props.theme.white};
 
-  background: ${props => 
+  background: ${props =>
     props.variant === 'cart' ? props.theme["yellow-700"] :
-    props.variant === 'package' ? props.theme["gray-700"] :
-    props.variant === 'timer' ? props.theme["yellow-500"] :
-    props.variant === 'coffe' ? props.theme["purple-500"]:
-    props.theme["gray-900"]} ;
+      props.variant === 'package' ? props.theme["gray-700"] :
+        props.variant === 'timer' ? props.theme["yellow-500"] :
+          props.variant === 'coffe' ? props.theme["purple-500"] :
+            props.theme["gray-900"]} ;
 `
