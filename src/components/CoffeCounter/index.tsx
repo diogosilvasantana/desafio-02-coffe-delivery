@@ -19,15 +19,15 @@ export function CoffeCounter() {
 
   return (
     <CounterContainer>
-        <button onClick={handleRemoveCoffe} disabled={coffeCount === 1}>
-          <Minus size={16} weight="bold"/>
-        </button>
+      <button onClick={handleRemoveCoffe} disabled={coffeCount === 1}>
+        <Minus size={16} weight="bold" />
+      </button>
 
-        <span>{coffeCount}</span>
+      <span>{coffeCount}</span>
 
-        <button onClick={handleAddCoffe}>
-          <Plus size={16} weight="bold"/>
-        </button>
+      <button onClick={handleAddCoffe}>
+        <Plus size={16} weight="bold" />
+      </button>
     </CounterContainer>
   )
 }
