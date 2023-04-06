@@ -1,8 +1,16 @@
 import styled from "styled-components";
 
-export const IntroContainer = styled.section`
-  padding: 5.75rem 10rem;
+export const IntroSection = styled.section`
+    padding: 5.75rem 10rem;
+`
+
+export const IntroContainer = styled.div`
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
   display: flex;
+  justify-content: space-between;
+  align-items: start;
   gap: 3.5rem;
 `;
 export const IntroContent = styled.div`
@@ -25,7 +33,8 @@ export const IntroContent = styled.div`
 export const IntroDetails = styled.div`
   margin-top: 4.125rem;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 45% 58%;
+  gap: 0 1.5rem;
 
   span {
     padding: 0.625rem 0;

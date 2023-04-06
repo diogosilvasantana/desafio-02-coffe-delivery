@@ -3,6 +3,7 @@ import {
   IntroContent,
   IntroDetails,
   IntroDetailsIcon,
+  IntroSection,
 } from "./styles";
 
 import coffeIntroImg from "../../assets/coffe-intro.svg";
@@ -10,6 +11,8 @@ import { Coffee, Package, ShoppingCart, Timer } from "phosphor-react";
 
 export function Intro() {
   return (
+    <IntroSection>
+
     <IntroContainer>
       <IntroContent>
         <h1>Encontre o café perfeito para qualquer hora do dia</h1>
@@ -52,5 +55,6 @@ export function Intro() {
 
       <img src={coffeIntroImg} alt="" />
     </IntroContainer>
+    </IntroSection>
   );
 }
