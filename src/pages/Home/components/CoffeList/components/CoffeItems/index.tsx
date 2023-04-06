@@ -1,7 +1,7 @@
 import { CartButton, CoffeItemCard, CoffeItemFooter, CoffeListContainer, CoffePrice, CoffeTypeLabel, CounterContainer } from "./styles";
 
 import traditionalCoffeImg from '../../../../../../assets/coffes-img/traditional.svg'
-import { ShoppingCart } from "phosphor-react";
+import { ShoppingCartSimple } from "phosphor-react";
 import { CoffeCounter } from "../../../../../../components/CoffeCounter";
 
 export function CoffeItems() {
@@ -27,7 +27,7 @@ export function CoffeItems() {
             <CoffeCounter />
 
             <CartButton>
-              <ShoppingCart weight="fill" size={22} />
+              <ShoppingCartSimple weight="fill" size={22} />
             </CartButton>
           </CounterContainer>
 
