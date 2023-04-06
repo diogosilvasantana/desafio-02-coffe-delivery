@@ -1,26 +1,56 @@
-import { IntroContainer, IntroContent, IntroDetails } from "./styles";
+import {
+  IntroContainer,
+  IntroContent,
+  IntroDetails,
+  IntroDetailsIcon,
+} from "./styles";
 
-import coffeIntroImg from '../../assets/coffe-intro.svg'
+import coffeIntroImg from "../../assets/coffe-intro.svg";
+import { Coffee, Package, ShoppingCart, Timer } from "phosphor-react";
 
 export function Intro() {
   return (
     <IntroContainer>
-      
       <IntroContent>
         <h1>Encontre o café perfeito para qualquer hora do dia</h1>
 
-        <h2>Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora</h2>
+        <h2>
+          Com o Coffee Delivery você recebe seu café onde estiver, a qualquer
+          hora
+        </h2>
 
         <IntroDetails>
-          <span>Compra simples e segura</span>
-          <span>Embalagem mantém o café intacto</span>
-          <span>Entrega rápida e rastreada</span>
-          <span>O café chega fresquinho até você</span>
-        </IntroDetails>
+          <span>
+            <IntroDetailsIcon variant="cart">
+              <ShoppingCart weight="fill" />
+            </IntroDetailsIcon>
+            Compra simples e segura
+          </span>
 
+          <span>
+            <IntroDetailsIcon variant="package">
+              <Package weight="fill" />
+            </IntroDetailsIcon>
+            Embalagem mantém o café intacto
+          </span>
+
+          <span>
+            <IntroDetailsIcon variant="timer">
+              <Timer weight="fill" />
+            </IntroDetailsIcon>
+            Entrega rápida e rastreada
+          </span>
+
+          <span>
+            <IntroDetailsIcon variant="coffe">
+              <Coffee weight="fill" />
+            </IntroDetailsIcon>
+            O café chega fresquinho até você
+          </span>
+        </IntroDetails>
       </IntroContent>
 
       <img src={coffeIntroImg} alt="" />
     </IntroContainer>
-  )
+  );
 }
