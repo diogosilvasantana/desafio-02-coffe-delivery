@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
   }
 
-  body, input, select, button {
+  body, input, select {
     font: 400 1rem 'Roboto', sans-serif;
   }
 `
