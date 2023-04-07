@@ -59,7 +59,7 @@ export const CoffeType = styled.div`
   span {
     background: ${props => props.theme["yellow-300"]};
     color: ${props => props.theme["yellow-700"]};
-    border-radius: 20px;
+    border-radius: 100px;
     margin-top: 0.75rem;
     padding: 0.25rem 0.5rem;
     font-size: 0.625rem;
