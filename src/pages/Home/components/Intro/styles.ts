@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const IntroSection = styled.section`
-  padding: 5.75rem 10rem;
+  padding: 5.75rem 0;
   background: url('src/assets/bg-intro.svg');
   background-size: cover;
   mask-image: linear-gradient(
