@@ -1,11 +1,12 @@
 import { CoffeList } from "./components/CoffeList";
 import { Intro } from "./components/Intro";
+import { HomeContainer } from "./styles";
 
 export function Home() {
   return (
-    <>
-    <Intro />
-    <CoffeList />
-    </>
+    <HomeContainer>
+      <Intro />
+      <CoffeList />
+    </ HomeContainer>
   )
 }

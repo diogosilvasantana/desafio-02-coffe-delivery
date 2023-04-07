@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const CoffeListContainer = styled.div`
-  padding: 2rem 10rem;
+  padding: 2rem 9rem;
+  margin-bottom: 9rem;
 `
 
 export const CoffeContent = styled.main`

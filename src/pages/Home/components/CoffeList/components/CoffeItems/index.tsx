@@ -1,49 +1,63 @@
-import { CartButton, CoffeItemCard, CoffeItemFooter, CoffeListContainer, CoffePrice, CoffeTypeLabel, CounterContainer } from "./styles";
+import { CartButton, CoffeItemCard, CoffeListContainer, CoffePrice, CoffeType, CounterContainer } from "./styles";
 
-import traditionalCoffeImg from '../../../../../../assets/coffes-img/traditional.svg'
 import { ShoppingCartSimple } from "phosphor-react";
 import { CoffeCounter } from "../../../../../../components/CoffeCounter";
 
+import coffeListData from '../../../../../../data/coffes-catalog.json';
+
+interface Coffe {
+  id: number;
+  name: string;
+  type: string[],
+  description: string,
+  price: number,
+  image: string
+}
+
 export function CoffeItems() {
+
+  const coffeImgPatch = '/src/assets/coffes-img'
+
   return (
     <CoffeListContainer>
 
-      <CoffeItemCard>
-        <img src={traditionalCoffeImg} alt="" />
+      {coffeListData.map(item => {
+        return (
 
-        <CoffeTypeLabel>TRADICIONAL</CoffeTypeLabel>
+          <CoffeItemCard key={item.id}>
+            <img src={`${coffeImgPatch}/${item.image}`} alt="" />
 
-        <h3>Expresso Tradicional</h3>
+            <CoffeType>
+              {item.type.map(type => {
+                return (
+                  <span key={type}>{type.toUpperCase()}</span>
+                )
+              })}
+            </CoffeType>
 
-        <p>O tradicional café feito com água quente e grãos moídos</p>
+            <h3>{item.name}</h3>
 
-        <footer>
+            <p>{item.description}</p>
 
-          <CoffePrice>
-            R$ <strong>9,90</strong>
-          </CoffePrice>
+            <footer>
 
-          <CounterContainer>
-            <CoffeCounter />
+              <CoffePrice>
+                R$ <strong>{item.price}</strong>
+              </CoffePrice>
 
-            <CartButton>
-              <ShoppingCartSimple weight="fill" size={22} />
-            </CartButton>
-          </CounterContainer>
+              <CounterContainer>
+                <CoffeCounter />
 
-        </footer>
+                <CartButton>
+                  <ShoppingCartSimple weight="fill" size={22} />
+                </CartButton>
+              </CounterContainer>
 
-      </CoffeItemCard>
+            </footer>
 
-
-
-      <CoffeItemCard />
-      <CoffeItemCard />
-      <CoffeItemCard />
-      <CoffeItemCard />
-      <CoffeItemCard />
-      <CoffeItemCard />
-
+          </CoffeItemCard>
+        )
+      })}
     </CoffeListContainer>
   )
 }

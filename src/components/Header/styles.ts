@@ -1,5 +1,12 @@
 import styled, { css } from "styled-components";
 
+export const HeaderFixed = styled.div`
+  width: 100%;
+  position: fixed;
+  background: ${props => props.theme["gray-100"]};
+  z-index: 9999;
+`
+
 export const HeaderContainer = styled.header`
   padding: 2rem 10rem;
 `

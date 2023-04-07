@@ -15,7 +15,7 @@ export function CoffeCounter() {
     setCoffeCount((state) => {
       return state - 1
     });
-  }
+  } 
 
   return (
     <CounterContainer>

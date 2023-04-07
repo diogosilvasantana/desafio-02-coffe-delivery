@@ -1,28 +1,30 @@
-import { HeaderButtonContainer, HeaderButton, HeaderContainer, HeaderContent } from "./styles";
+import { HeaderButtonContainer, HeaderButton, HeaderContainer, HeaderContent, HeaderFixed } from "./styles";
 
 import { MapPin, ShoppingCart } from 'phosphor-react'
 import logoImg from '../../assets/logo.svg'
 
 export function Header() {
   return (
-   <HeaderContainer>
-    <HeaderContent>
+    <HeaderFixed>
+      <HeaderContainer>
+        <HeaderContent>
 
-    <img src={logoImg} alt="" />
+          <img src={logoImg} alt="" />
 
-    <HeaderButtonContainer>
-      <HeaderButton variant="purple">
-        <MapPin weight="fill" size={22}/>
-        Porto Alegre, RS
-      </HeaderButton>
+          <HeaderButtonContainer>
+            <HeaderButton variant="purple">
+              <MapPin weight="fill" size={22} />
+              Porto Alegre, RS
+            </HeaderButton>
 
-      <HeaderButton variant="yellow">
-        <ShoppingCart weight="fill" size={22}/>
-      </HeaderButton>
+            <HeaderButton variant="yellow">
+              <ShoppingCart weight="fill" size={22} />
+            </HeaderButton>
 
-    </HeaderButtonContainer>
+          </HeaderButtonContainer>
 
-    </HeaderContent>
-   </HeaderContainer>
+        </HeaderContent>
+      </HeaderContainer>
+    </HeaderFixed>
   )
 }

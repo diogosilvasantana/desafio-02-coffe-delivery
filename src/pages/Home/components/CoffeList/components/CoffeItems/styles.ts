@@ -49,15 +49,23 @@ export const CoffeItemCard = styled.div`
   }
 `
 
-export const CoffeTypeLabel = styled.span`
-  background: ${props => props.theme["yellow-300"]};
-  color: ${props => props.theme["yellow-700"]};
-  border-radius: 20px;
-  margin-top: 0.75rem;
-  padding: 0.25rem 0.5rem;
-  font-size: 0.625rem;
-  font-weight: bold;
-  line-height: 1.3;
+export const CoffeType = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+
+  span {
+    background: ${props => props.theme["yellow-300"]};
+    color: ${props => props.theme["yellow-700"]};
+    border-radius: 20px;
+    margin-top: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.625rem;
+    font-weight: bold;
+    line-height: 1.3;
+  }
 `
 
 export const CoffeItemFooter = styled.footer`
