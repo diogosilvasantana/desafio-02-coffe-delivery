@@ -7,6 +7,6 @@ export function Home() {
     <HomeContainer>
       <Intro />
       <CoffeList />
-    </ HomeContainer>
-  )
+    </HomeContainer>
+  );
 }
