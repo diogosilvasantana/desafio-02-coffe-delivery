@@ -1,15 +1,24 @@
-import { HeaderButtonContainer, HeaderButton, HeaderContainer, HeaderContent, HeaderFixed, BadgeQuantityButton } from "./styles";
+import {
+  HeaderButtonContainer,
+  HeaderButton,
+  HeaderContainer,
+  HeaderContent,
+  HeaderFixed,
+  BadgeQuantityButton,
+} from './styles'
 
 import { MapPin, ShoppingCart } from 'phosphor-react'
 import logoImg from '../../assets/logo.svg'
+import { Link } from 'react-router-dom'
 
 export function Header() {
   return (
     <HeaderFixed>
       <HeaderContainer>
         <HeaderContent>
-
-          <img src={logoImg} alt="" />
+          <Link to="/">
+            <img src={logoImg} alt="" />
+          </Link>
 
           <HeaderButtonContainer>
             <HeaderButton variant="purple">
@@ -17,13 +26,13 @@ export function Header() {
               Porto Alegre, RS
             </HeaderButton>
 
-            <HeaderButton variant="yellow">
-              <ShoppingCart weight="fill" size={22} />
-              <BadgeQuantityButton>3</BadgeQuantityButton>
-            </HeaderButton>
-
+            <Link to="/checkout">
+              <HeaderButton variant="yellow">
+                <ShoppingCart weight="fill" size={22} />
+                <BadgeQuantityButton>3</BadgeQuantityButton>
+              </HeaderButton>
+            </Link>
           </HeaderButtonContainer>
-
         </HeaderContent>
       </HeaderContainer>
     </HeaderFixed>

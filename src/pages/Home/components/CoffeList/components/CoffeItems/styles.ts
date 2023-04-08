@@ -1,10 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const CoffeListContainer = styled.div`
-  width: 100%;
-  max-width: 1120px;
-  margin: 0 auto;
-
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2.5rem 2rem;
@@ -12,7 +8,7 @@ export const CoffeListContainer = styled.div`
 
 export const CoffeItemCard = styled.div`
   padding: 1.25rem;
-  background: ${props => props.theme["gray-200"]};
+  background: ${(props) => props.theme['gray-200']};
   border-radius: 6px 36px 6px 36px;
 
   display: flex;
@@ -29,7 +25,7 @@ export const CoffeItemCard = styled.div`
     font-family: 'Baloo 2', sans-serif;
     font-size: 1.25rem;
     font-weight: 900;
-    color: ${props => props.theme["gray-800"]};
+    color: ${(props) => props.theme['gray-800']};
   }
 
   p {
@@ -37,7 +33,7 @@ export const CoffeItemCard = styled.div`
     font-size: 0.875rem;
     line-height: 1.3;
     text-align: center;
-    color: ${props => props.theme["gray-600"]};
+    color: ${(props) => props.theme['gray-600']};
   }
 
   footer {
@@ -57,8 +53,8 @@ export const CoffeType = styled.div`
   flex-wrap: wrap;
 
   span {
-    background: ${props => props.theme["yellow-300"]};
-    color: ${props => props.theme["yellow-700"]};
+    background: ${(props) => props.theme['yellow-300']};
+    color: ${(props) => props.theme['yellow-700']};
     border-radius: 100px;
     margin-top: 0.75rem;
     padding: 0.25rem 0.5rem;
@@ -74,7 +70,6 @@ export const CoffeItemFooter = styled.footer`
 `
 
 export const CoffePrice = styled.span`
-
   font-size: 0.875rem;
 
   strong {
@@ -90,8 +85,8 @@ export const CounterContainer = styled.div`
 `
 
 export const CartButton = styled.button`
-  background: ${props => props.theme["purple-700"]};
-  color: ${props => props.theme["gray-200"]};
+  background: ${(props) => props.theme['purple-700']};
+  color: ${(props) => props.theme['gray-200']};
   border: none;
   width: 2.375rem;
   height: 2.375rem;
@@ -100,6 +95,6 @@ export const CartButton = styled.button`
   cursor: pointer;
 
   &:hover {
-    background: ${props => props.theme["purple-500"]};
+    background: ${(props) => props.theme['purple-500']};
   }
 `

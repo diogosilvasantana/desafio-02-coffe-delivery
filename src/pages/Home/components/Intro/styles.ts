@@ -1,15 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const IntroSection = styled.section`
   padding: 5.75rem 0;
-  background: url('src/assets/bg-intro.svg');
-  background-size: cover;
-  mask-image: linear-gradient(
-            to top,
-            transparent 1%,
-            black 20%,
-            black 100%
-          );  
 `
 
 export const IntroContainer = styled.div`
@@ -20,24 +12,24 @@ export const IntroContainer = styled.div`
   justify-content: space-between;
   align-items: start;
   gap: 3.5rem;
-`;
+`
 export const IntroContent = styled.div`
   h1 {
-    font-family: "Baloo 2", sans-serif;
+    font-family: 'Baloo 2', sans-serif;
     font-size: 3rem;
     font-weight: 900;
     line-height: 1.3;
-    color: ${(props) => props.theme["gray-900"]};
+    color: ${(props) => props.theme['gray-900']};
   }
 
   h2 {
     margin-top: 1rem;
-    color: ${(props) => props.theme["gray-800"]};
+    color: ${(props) => props.theme['gray-800']};
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.3;
   }
-`;
+`
 export const IntroDetails = styled.div`
   margin-top: 4.125rem;
   display: grid;
@@ -52,10 +44,10 @@ export const IntroDetails = styled.div`
     gap: 0.5rem;
     font-size: 1rem;
   }
-`;
+`
 
 interface IntroDetailsIconsProps {
-  variant?: 'cart' | 'package' | 'timer' | 'coffe';
+  variant?: 'cart' | 'package' | 'timer' | 'coffe'
 }
 
 export const IntroDetailsIcon = styled.div<IntroDetailsIconsProps>`
@@ -67,12 +59,16 @@ export const IntroDetailsIcon = styled.div<IntroDetailsIconsProps>`
   align-items: center;
   justify-content: center;
 
-  color: ${props => props.theme.white};
+  color: ${(props) => props.theme.white};
 
-  background: ${props =>
-    props.variant === 'cart' ? props.theme["yellow-700"] :
-      props.variant === 'package' ? props.theme["gray-700"] :
-        props.variant === 'timer' ? props.theme["yellow-500"] :
-          props.variant === 'coffe' ? props.theme["purple-500"] :
-            props.theme["gray-900"]} ;
+  background: ${(props) =>
+    props.variant === 'cart'
+      ? props.theme['yellow-700']
+      : props.variant === 'package'
+      ? props.theme['gray-700']
+      : props.variant === 'timer'
+      ? props.theme['yellow-500']
+      : props.variant === 'coffe'
+      ? props.theme['purple-500']
+      : props.theme['gray-900']};
 `

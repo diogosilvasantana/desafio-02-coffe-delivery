@@ -1,37 +1,30 @@
-import { CartButton, CoffeItemCard, CoffeListContainer, CoffePrice, CoffeType, CounterContainer } from "./styles";
+import {
+  CartButton,
+  CoffeItemCard,
+  CoffeListContainer,
+  CoffePrice,
+  CoffeType,
+  CounterContainer,
+} from './styles'
 
-import { ShoppingCartSimple } from "phosphor-react";
-import { CoffeCounter } from "../../../../../../components/CoffeCounter";
+import { ShoppingCartSimple } from 'phosphor-react'
+import { CoffeCounter } from '../../../../../../components/CoffeCounter'
 
-import coffeListData from '../../../../../../data/coffes-catalog.json';
-
-interface Coffe {
-  id: number;
-  name: string;
-  type: string[],
-  description: string,
-  price: number,
-  image: string
-}
+import coffeListData from '../../../../../../data/coffes-catalog.json'
 
 export function CoffeItems() {
-
   const coffeImgPatch = '/src/assets/coffes-img'
 
   return (
     <CoffeListContainer>
-
-      {coffeListData.map(item => {
+      {coffeListData.map((item) => {
         return (
-
           <CoffeItemCard key={item.id}>
             <img src={`${coffeImgPatch}/${item.image}`} alt="" />
 
             <CoffeType>
-              {item.type.map(type => {
-                return (
-                  <span key={type}>{type.toUpperCase()}</span>
-                )
+              {item.type.map((type) => {
+                return <span key={type}>{type.toUpperCase()}</span>
               })}
             </CoffeType>
 
@@ -40,7 +33,6 @@ export function CoffeItems() {
             <p>{item.description}</p>
 
             <footer>
-
               <CoffePrice>
                 R$ <strong>{item.price}</strong>
               </CoffePrice>
@@ -52,9 +44,7 @@ export function CoffeItems() {
                   <ShoppingCartSimple weight="fill" size={22} />
                 </CartButton>
               </CounterContainer>
-
             </footer>
-
           </CoffeItemCard>
         )
       })}

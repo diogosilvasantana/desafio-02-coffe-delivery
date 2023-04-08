@@ -1,5 +1,3 @@
 export function Success() {
-  return (
-    <div>Success</div>
-  )
+  return <div>Success</div>
 }
