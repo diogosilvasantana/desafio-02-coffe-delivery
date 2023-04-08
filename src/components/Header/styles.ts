@@ -58,3 +58,19 @@ export const HeaderButton = styled.button<ButtonProps>`
       color: ${props.theme["yellow-700"]};
     `}
 `;
+
+export const BadgeQuantityButton = styled.div`
+  position: absolute;
+  font-weight: bold;
+  top: 1.5rem;  
+  right: -0.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: ${(props) => props.theme["yellow-700"]};
+  color:${(props) => props.theme.white}
+`;

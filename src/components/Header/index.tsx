@@ -1,4 +1,4 @@
-import { HeaderButtonContainer, HeaderButton, HeaderContainer, HeaderContent, HeaderFixed } from "./styles";
+import { HeaderButtonContainer, HeaderButton, HeaderContainer, HeaderContent, HeaderFixed, BadgeQuantityButton } from "./styles";
 
 import { MapPin, ShoppingCart } from 'phosphor-react'
 import logoImg from '../../assets/logo.svg'
@@ -19,6 +19,7 @@ export function Header() {
 
             <HeaderButton variant="yellow">
               <ShoppingCart weight="fill" size={22} />
+              <BadgeQuantityButton>3</BadgeQuantityButton>
             </HeaderButton>
 
           </HeaderButtonContainer>
