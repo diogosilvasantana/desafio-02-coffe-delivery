@@ -21,4 +21,11 @@ export const GlobalStyle = createGlobalStyle`
   body, input, select {
     font: 400 1rem 'Roboto', sans-serif;
   }
+
+  input {
+    &:focus {
+    outline:0;
+    box-shadow: 0 0 0 1px ${(props) => props.theme['yellow-500']};
+  }
+  }
 `
